@@ -8,6 +8,8 @@
 import Contacts
 import Foundation
 
+// MARK: - ContactsManager
+/// Manager to check for permission and fetch contacts
 final class ContactsManager {
     class func getContactsPermission(_ completion: @escaping (_ access: Bool) -> Void) {
         let contactsAuthorizationStatus = CNContactStore.authorizationStatus(for: CNEntityType.contacts)
