@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - UIColor
 extension UIColor {
     static var generateRandomColor: UIColor {
         UIColor(

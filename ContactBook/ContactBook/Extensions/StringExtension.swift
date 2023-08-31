@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-// MARK: - 
+// MARK: - String
 extension String {
     func generateImageFromInitials(
         font: UIFont,
