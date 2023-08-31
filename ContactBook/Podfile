@@ -1,0 +1,6 @@
+target 'ContactBook' do
+  use_frameworks!
+
+  # Pods for ContactBook
+  pod 'SwiftLint'
+end
