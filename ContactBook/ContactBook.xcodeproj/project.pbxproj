@@ -14,6 +14,8 @@
 		E0B839A52AA0C43000DE9D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B839A42AA0C43000DE9D38 /* Assets.xcassets */; };
 		E0B839A82AA0C43000DE9D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B839A62AA0C43000DE9D38 /* LaunchScreen.storyboard */; };
 		E0B839B02AA0C50800DE9D38 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E0B839AF2AA0C50800DE9D38 /* .swiftlint.yml */; };
+		E0B839B52AA0CBDD00DE9D38 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B839B42AA0CBDD00DE9D38 /* StringExtension.swift */; };
+		E0B839B72AA0CC0000DE9D38 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B839B62AA0CC0000DE9D38 /* UIColorExtension.swift */; };
 		E0B839BE2AA0CEA400DE9D38 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B839BD2AA0CEA400DE9D38 /* ContactModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		E0B839A72AA0C43000DE9D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B839A92AA0C43000DE9D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0B839AF2AA0C50800DE9D38 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		E0B839B42AA0CBDD00DE9D38 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E0B839B62AA0CC0000DE9D38 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E0B839BD2AA0CEA400DE9D38 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +88,7 @@
 			children = (
 				E0B8399F2AA0C43000DE9D38 /* ViewController.swift */,
 				E0B839BC2AA0CE8D00DE9D38 /* Models */,
+				E0B839B32AA0CBCC00DE9D38 /* Extensions */,
 				E0B839B22AA0C93200DE9D38 /* SupportingFiles */,
 				E0B839A92AA0C43000DE9D38 /* Info.plist */,
 				E0B839AF2AA0C50800DE9D38 /* .swiftlint.yml */,
@@ -100,6 +105,15 @@
 				E0B839A42AA0C43000DE9D38 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E0B839B32AA0CBCC00DE9D38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0B839B42AA0CBDD00DE9D38 /* StringExtension.swift */,
+				E0B839B62AA0CC0000DE9D38 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E0B839BC2AA0CE8D00DE9D38 /* Models */ = {
@@ -228,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B839A02AA0C43000DE9D38 /* ViewController.swift in Sources */,
+				E0B839B52AA0CBDD00DE9D38 /* StringExtension.swift in Sources */,
+				E0B839B72AA0CC0000DE9D38 /* UIColorExtension.swift in Sources */,
 				E0B8399C2AA0C43000DE9D38 /* AppDelegate.swift in Sources */,
 				E0B839BE2AA0CEA400DE9D38 /* ContactModel.swift in Sources */,
 				E0B8399E2AA0C43000DE9D38 /* SceneDelegate.swift in Sources */,
