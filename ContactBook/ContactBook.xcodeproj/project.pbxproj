@@ -19,6 +19,7 @@
 		E0B839BB2AA0CD4B00DE9D38 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B839BA2AA0CD4B00DE9D38 /* ContactsManager.swift */; };
 		E0B839BE2AA0CEA400DE9D38 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B839BD2AA0CEA400DE9D38 /* ContactModel.swift */; };
 		E0B83AA72AA73D04002DCA3D /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B83AA62AA73D04002DCA3D /* ContactListTableViewCell.swift */; };
+		E0B83AA92AA742FE002DCA3D /* ContactsListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B83AA82AA742FE002DCA3D /* ContactsListTableViewDataSource.swift */; };
 		E0B83AB22AA7A21E002DCA3D /* ContactInfoHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B83AB12AA7A21E002DCA3D /* ContactInfoHeaderViewCell.swift */; };
 		E0B83AB72AA7A65B002DCA3D /* PhoneNumberDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B83AB62AA7A65B002DCA3D /* PhoneNumberDetailsCell.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		E0B839BA2AA0CD4B00DE9D38 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 		E0B839BD2AA0CEA400DE9D38 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		E0B83AA62AA73D04002DCA3D /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		E0B83AA82AA742FE002DCA3D /* ContactsListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListTableViewDataSource.swift; sourceTree = "<group>"; };
 		E0B83AB12AA7A21E002DCA3D /* ContactInfoHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoHeaderViewCell.swift; sourceTree = "<group>"; };
 		E0B83AB62AA7A65B002DCA3D /* PhoneNumberDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberDetailsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E0B83AA42AA73CBB002DCA3D /* Cells */,
+				E0B83AA52AA73CE4002DCA3D /* DataSource */,
 			);
 			path = ContactsList;
 			sourceTree = "<group>";
@@ -165,6 +168,14 @@
 				E0B83AA62AA73D04002DCA3D /* ContactListTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E0B83AA52AA73CE4002DCA3D /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E0B83AA82AA742FE002DCA3D /* ContactsListTableViewDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		E0B83AAE2AA7A1BF002DCA3D /* ContactInfo */ = {
@@ -310,6 +321,7 @@
 				E0B83AA72AA73D04002DCA3D /* ContactListTableViewCell.swift in Sources */,
 				E0B839BE2AA0CEA400DE9D38 /* ContactModel.swift in Sources */,
 				E0B839BB2AA0CD4B00DE9D38 /* ContactsManager.swift in Sources */,
+				E0B83AA92AA742FE002DCA3D /* ContactsListTableViewDataSource.swift in Sources */,
 				E0B8399E2AA0C43000DE9D38 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
