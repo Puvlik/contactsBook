@@ -14,8 +14,9 @@ private enum Constants {
     static var contactNameLabelHeight: CGFloat { 30 }
     static var defaultPadding16: CGFloat { 16 }
     static var stackViewSpacing: CGFloat { 5 }
+    static var contactImageFrameValue: CGFloat { 200 }
 
-    static var contactInfoTextColor: UIColor { .black }
+    static var contactInfoTextColor: UIColor { .labelTextColor }
 
     static var contactNameTextFont: UIFont { .boldSystemFont(ofSize: 21) }
 }
@@ -65,15 +66,17 @@ final class ContactInfoHeaderViewCell: UITableViewCell {
         addSubview(contactImageView)
         addSubview(contactNameLabel)
 
-        contactNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        contactNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        contactNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        contactNameLabel.heightAnchor.constraint(equalToConstant: Constants.contactNameLabelHeight).isActive = true
-
         contactImageView.topAnchor.constraint(equalTo: topAnchor,
                                               constant: Constants.defaultPadding16).isActive = true
         contactImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        contactImageView.bottomAnchor.constraint(equalTo: contactNameLabel.topAnchor,
+        contactImageView.heightAnchor.constraint(equalToConstant: Constants.contactImageFrameValue).isActive = true
+        contactImageView.widthAnchor.constraint(equalToConstant: Constants.contactImageFrameValue).isActive = true
+
+        contactNameLabel.topAnchor.constraint(equalTo: contactImageView.bottomAnchor,
+                                              constant: Constants.defaultPadding16).isActive = true
+        contactNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        contactNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        contactNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
                                                  constant: -Constants.defaultPadding16).isActive = true
     }
 }
