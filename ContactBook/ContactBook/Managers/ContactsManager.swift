@@ -7,6 +7,7 @@
 
 import Contacts
 import Foundation
+import UIKit
 
 // MARK: - ContactsManager
 /// Manager to check for permission and fetch contacts
@@ -48,5 +49,11 @@ final class ContactsManager {
         }
 
         return (contacts, fetchError)
+    }
+
+    class func showAlert(with message: String, completion: (UIAlertController) -> ()) {
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        alert.addAction(.init(title: "OK", style: .cancel, handler: nil))
+        completion(alert)
     }
 }
