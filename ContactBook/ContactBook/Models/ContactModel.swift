@@ -44,10 +44,15 @@ struct ContactModel {
     // MARK: - Init
     init(contact: CNContact) {
         fullName = CNContactFormatter.string(from: contact, style: .fullName)
-        phoneNumbers = contact.phoneNumbers.compactMap { phone in
-            let localizedLabel = CNLabeledValue<NSString>.localizedString(
-                forLabel: phone.label ?? Constants.emptyString)
-            return .init(numberType: localizedLabel, number: phone.value.stringValue)
+
+        if contact.phoneNumbers.isEmpty {
+            phoneNumbers = [.init(numberType: "Unknown type", number: "Unable to get contact number")]
+        } else {
+            phoneNumbers = contact.phoneNumbers.compactMap { phone in
+                let localizedLabel = CNLabeledValue<NSString>.localizedString(
+                    forLabel: phone.label ?? Constants.emptyString)
+                return .init(numberType: localizedLabel, number: phone.value.stringValue)
+            }
         }
 
         guard let contactImageData = contact.imageData else {

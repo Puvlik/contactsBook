@@ -66,11 +66,11 @@ extension ContactInfoViewController: UITableViewDelegate {}
 // MARK: - UITableViewDataSource
 extension ContactInfoViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 0 : (contact?.phoneNumbers.count ?? .zero)
+        (contact?.phoneNumbers.count ?? .zero) + 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,7 +85,7 @@ extension ContactInfoViewController: UITableViewDataSource {
             guard let cell = contactPhonesTableView.dequeueReusableCell(
                 withIdentifier: Constants.phoneCellIdentifier,
                 for: indexPath) as? PhoneNumberDetailsCell else { return UITableViewCell() }
-            cell.data = contact?.phoneNumbers[indexPath.row]
+            cell.data = contact?.phoneNumbers[indexPath.row - 1]
             return cell
         }
     }
