@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Constants
 private enum Constants {
-    static var stackViewSpacing: CGFloat { 5 }
+    static var stackViewSpacing: CGFloat { 10 }
     static var contactImageViewCornerRadius: CGFloat { 24 }
     static var defaultSidePadding16: CGFloat { 16 }
     static var defaultSidePadding24: CGFloat { 24 }
@@ -98,6 +98,7 @@ final class ContactListTableViewCell: UITableViewCell {
 
         contactInfoStackView.topAnchor.constraint(equalTo: topAnchor,
                                                   constant: Constants.defaultSidePadding24).isActive = true
+        contactInfoStackView.centerYAnchor.constraint(equalTo: contactImageView.centerYAnchor).isActive = true
         contactInfoStackView.leadingAnchor.constraint(equalTo: contactImageView.trailingAnchor,
                                                       constant: Constants.defaultSidePadding16).isActive = true
         contactInfoStackView.trailingAnchor.constraint(equalTo: trailingAnchor,

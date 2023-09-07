@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Constants
 private enum Constants {
-    static var stackViewSpacing: CGFloat { 5 }
+    static var stackViewSpacing: CGFloat { 10 }
     static var defaultSidePadding16: CGFloat { 16 }
     static var defaultSidePadding24: CGFloat { 24 }
     static var contactImageSizeValue: CGFloat { 60 }
@@ -83,6 +83,6 @@ final class PhoneNumberDetailsCell: UITableViewCell {
         phoneInfoStackView.trailingAnchor.constraint(equalTo: trailingAnchor,
                                                        constant: -Constants.defaultSidePadding16).isActive = true
         phoneInfoStackView.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                                     constant: -Constants.defaultSidePadding24).isActive = true
+                                                     constant: -Constants.defaultSidePadding16).isActive = true
     }
 }
