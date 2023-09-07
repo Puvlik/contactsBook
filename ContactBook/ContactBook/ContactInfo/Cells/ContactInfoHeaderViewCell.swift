@@ -18,7 +18,7 @@ private enum Constants {
 
     static var contactInfoTextColor: UIColor { .labelTextColor }
 
-    static var contactNameTextFont: UIFont { .boldSystemFont(ofSize: 21) }
+    static var contactNameTextFont: UIFont { .boldSystemFont(ofSize: 22) }
 }
 
 // MARK: - ContactInfoHeaderViewCell

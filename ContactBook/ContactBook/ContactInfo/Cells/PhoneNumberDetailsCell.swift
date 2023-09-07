@@ -18,7 +18,7 @@ private enum Constants {
     static var contactInfoTextColor: UIColor { .labelTextColor }
 
     static var contactNameTextFont: UIFont { .boldSystemFont(ofSize: 16) }
-    static var contactPhoneNumberFont: UIFont { .systemFont(ofSize: 16) }
+    static var contactPhoneNumberFont: UIFont { .systemFont(ofSize: 18, weight: .medium) }
 }
 
 final class PhoneNumberDetailsCell: UITableViewCell {
