@@ -15,7 +15,7 @@ private enum Constants {
     static var defaultSidePadding24: CGFloat { 24 }
     static var contactImageSizeValue: CGFloat { 60 }
 
-    static var contactInfoTextColor: UIColor { .black }
+    static var contactInfoTextColor: UIColor { .labelTextColor }
 
     static var contactNameTextFont: UIFont { .boldSystemFont(ofSize: 16) }
     static var contactPhoneNumberFont: UIFont { .systemFont(ofSize: 16) }

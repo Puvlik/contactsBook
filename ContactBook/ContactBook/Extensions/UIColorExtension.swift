@@ -18,4 +18,12 @@ extension UIColor {
             alpha: 1.0
         )
     }
+
+    static var labelTextColor: UIColor {
+        UIColor(named: "labelTextColor") ?? .black
+    }
+
+    static var navControllerColor: UIColor {
+        UIColor(named: "navControllerColor") ?? .black
+    }
 }

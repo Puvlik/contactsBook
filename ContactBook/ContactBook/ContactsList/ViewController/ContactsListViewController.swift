@@ -19,7 +19,10 @@ private enum Constants {
     Please go to Settings and give access for app to use your Contacts
     """ }
 
+    static var navControllerColor: UIColor { .navControllerColor }
+    static var defaultTextColor: UIColor { .labelTextColor }
     static var placeholderTextLabelFont: UIFont { .boldSystemFont(ofSize: 25) }
+    static var navControllerTitleFont: UIFont { .boldSystemFont(ofSize: 19) }
 
     static var defaultPadding16: CGFloat { 16 }
     static var settingsButtonAlpha: CGFloat { 0.2 }
@@ -43,6 +46,7 @@ final class ContactsListViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isHidden = true
         label.numberOfLines = 0
+        label.textColor = Constants.defaultTextColor
         label.font = Constants.placeholderTextLabelFont
         label.textAlignment = .center
         return label
@@ -53,7 +57,7 @@ final class ContactsListViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isHidden = true
         button.backgroundColor = .gray.withAlphaComponent(Constants.settingsButtonAlpha)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(Constants.defaultTextColor, for: .normal)
         button.layer.cornerRadius = Constants.settingsButtonCornerRadius
         button.setTitle(Constants.settingsButtonTitleText, for: .normal)
         button.addTarget(self, action: #selector(openDeviceSettings), for: .touchUpInside)
@@ -73,9 +77,12 @@ final class ContactsListViewController: UIViewController {
 
     // MARK: - Private methods
     private func setupNavController() {
-        view.backgroundColor = .white
+        view.backgroundColor = Constants.navControllerColor
         navigationController?.navigationBar.barStyle = .default
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: Constants.defaultTextColor,
+            .font: Constants.navControllerTitleFont
+        ]
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.title = Constants.navigationItemText
     }
