@@ -36,7 +36,7 @@ final class ContactInfoHeaderViewCell: UITableViewCell {
     private lazy var contactImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         imageView.layer.cornerRadius = Constants.contactImageViewCornerRadius
         imageView.clipsToBounds = true
         return imageView
@@ -54,6 +54,7 @@ final class ContactInfoHeaderViewCell: UITableViewCell {
     // MARK: - init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
         setupSubviews()
     }
 
